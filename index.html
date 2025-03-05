@@ -23,189 +23,442 @@
         <div class="reveal">
             <div class="slides">
                 <section>
-                    <h1>Beautiful presentations</h1>
-                    <h2>New features</h2>
-                    <ul>
-                        <li>Nerd icons </li>
-                        <li>
-                            <code class="js">
-                                (inline) => code("highlighting")
-                            </code>
-                        </li>
-                        <li>Automatic QR Code generation</li>
-                        <li>and much more!</li>
-                    </ul>
-                </section>
-                <section>
-                    <h1>CUSTOM TOKYONIGHT THEME</h1>
-                    <h2 class="fragment">THAT HAS</h2>
-                    <h3 class="fragment">MULTI</h3>
-                    <h4 class="fragment">LEVEL</h4>
-                    <h5 class="fragment">HEADING</h5>
-                    <h6 class="fragment">COLORS</h6>
-                    <h6>
-                        Thanks to this project
-                        <a
-                            href="https://github.com/tcmmichaelb139/obsidian-tokyonight">
-                            
-                        </a>
-                        for the colorscheme!
-                    </h6>
+                    <h1>Текст и все с ним связанное</h1>
+                    <img
+                        class="r-stretch"
+                        src="https://ktkv-presentations.github.io/uidev-6"
+                        data-type="qrcode" />
                 </section>
                 <section>
                     <section>
-                        <h1>Tailwind CSS</h1>
-                        <div class="grid grid-cols-2 gap-8">
-                            <div>
-                                <h5>Lorem, ipsum.</h5>
+                        <h1>Текст</h1>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="border-b">
+                                <h4>Читаемость</h4>
                                 <p>
-                                    Lorem ipsum dolor sit amet consectetur
-                                    adipisicing elit. Error quod fugiat harum
-                                    modi laboriosam dignissimos, maxime
-                                    possimus? Error, nihil in.
+                                    правильный выбор шрифта, размера и
+                                    межстрочного интервала снижает нагрузку на
+                                    глаза
                                 </p>
                             </div>
-                            <div>
-                                <h5>Lorem, ipsum.</h5>
+                            <div class="border-b">
+                                <h4>Визуальная иерархия</h4>
                                 <p>
-                                    Lorem ipsum dolor sit amet consectetur
-                                    adipisicing elit. Error quod fugiat harum
-                                    modi laboriosam dignissimos, maxime
-                                    possimus? Error, nihil in.
+                                    заголовки, акцентные элементы и цветовые
+                                    различия помогают пользователю быстро
+                                    воспринимать информацию
                                 </p>
                             </div>
-                            <div class="col-span-2">
-                                <h5>Lorem, ipsum.</h5>
+                            <div style="grid-column: span 2" class="border-b">
+                                <h4>Эстетика и брендирование</h4>
                                 <p>
-                                    Lorem ipsum dolor sit amet consectetur
-                                    adipisicing elit. Error quod fugiat harum
-                                    modi laboriosam dignissimos, maxime
-                                    possimus? Error, nihil in.
+                                    стилизация текста формирует облик сайта и
+                                    влияет на восприятие бренда
                                 </p>
                             </div>
                         </div>
                     </section>
                     <section>
-                        <h1>Custom classes</h1>
-                        <div class="grid grid-cols-3 gap-8">
-                            <div class="border-r">
-                                <h5>border-r</h5>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur
-                                    adipisicing elit. Illum, soluta!
-                                </p>
-                            </div>
-                            <div class="border-o">
-                                <h5>border-o</h5>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur
-                                    adipisicing elit. Illum, soluta!
-                                </p>
-                            </div>
-                            <div class="border-y">
-                                <h5>border-y</h5>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur
-                                    adipisicing elit. Illum, soluta!
-                                </p>
-                            </div>
-                        </div>
+                        <h1>Этапы обработки текста в браузере</h1>
+                        <ol>
+                            <li>
+                                Парсинг HTML → создаётся DOM (структура
+                                документа).
+                            </li>
+                            <li>
+                                Загрузка и обработка CSS → формируется CSSOM
+                                (CSS Object Model).
+                            </li>
+                            <li>
+                                Объединение DOM + CSSOM → создаётся
+                                рендер-дерево.
+                            </li>
+                            <li>Размещение элементов на странице (layout).</li>
+                            <li>
+                                Растеризация и отображение текста на экране.
+                            </li>
+                        </ol>
                     </section>
-                </section>
-                <section>
-                    <section data-auto-animate>
-                        <h1>New code highlighting!</h1>
-                        <div>
-                            Now also has Tokyo Night
-                            <code>highlight.js</code>
-                            highlighting implementation
-                        </div>
-                        <pre><code data-trim data-noescape>
-var foo = {
-    bar: function () {
-             alert("Hello, World!");
-         }
-};	
-					</code></pre>
-                    </section>
-                    <section data-auto-animate>
-                        <h1>New code highlighting!</h1>
-                        <h5>Inline code highlighting is now also supported!</h5>
+                    <section>
+                        <h1>CSS Object Model</h1>
                         <p>
-                            Just wrap your code with
-                            <code>&lt;code&gt;</code>
-                            tag and get highlighting like this
-                            <code class="js">
-                                const foo = () => {return bar}
-                            </code>
-                            !
+                            модель, представляющая CSS-стили на веб-странице как
+                            объектную структуру, доступную для программирования
                         </p>
                     </section>
                 </section>
                 <section>
-                    <h1>Mermaid for beautiful diagrams!</h1>
-                    <div class="mermaid">
-                        <pre>
-						erDiagram
-    CUSTOMER ||--o{ ORDER : ""
-    CUSTOMER {
-        string name
-        string custNumber
-        string sector
-    }
-    ORDER ||--|{ LINE-ITEM : contains
-    ORDER {
-        int orderNumber
-        string deliveryAddress
-    }
-    LINE-ITEM {
-        string productCode
-        int quantity
-        float pricePerUnit
-    }
-    ORDER ||--|{ STUDENT : contains
-    STUDENT {
-        int orderNumber
-        string deliveryAddress
-    }
-						</pre
-                        >
-                    </div>
-                    <h4>
-                        Check documentation
-                        <a href="https://mermaid.js.org/config/usage.html">
-                            here
-                        </a>
-                        !
-                    </h4>
+                    <section>
+                        <h1>Наследование и каскадность свойств текста</h1>
+                        <div class="border-r">
+                            Некоторые свойства CSS могут наследоваться дочерними
+                            элементами
+                        </div>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="border-g">
+                                <h4>Наследуемые</h4>
+                                <ul>
+                                    <li>color</li>
+                                    <li>font-family</li>
+                                    <li>visibility</li>
+                                    <li>cursor</li>
+                                </ul>
+                            </div>
+                            <div class="border-g">
+                                <h4>Ненаследуемые</h4>
+                                <ul>
+                                    <li>margin</li>
+                                    <li>padding</li>
+                                    <li>border</li>
+                                    <li>background</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <pre><code data-trim class="css">
+body {
+  color: navy;
+  font-family: Arial, sans-serif;
+}
+
+p {
+  font-size: 18px;
+}
+                        </code></pre>
+                        <em>
+                            Весь текст в body (включая p) будет navy, но размер
+                            font-size в p нужно задавать отдельно
+                        </em>
+                    </section>
+                    <section>
+                        <h1>Принудительное наследование</h1>
+                        <p>
+                            Если свойство не наследуется, но его нужно передать
+                            дочерним элементам, то можно использовать
+                            <code>inherit</code>
+                        </p>
+                        <pre><code data-trim class="css">
+p {
+  all: inherit;
+}
+                        </code></pre>
+                    </section>
+                    <section>
+                        <h1>Прекращение наследования</h1>
+                        <p>Чтобы сбросить стиль, используется:</p>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <h4>initial</h4>
+                                <p>значение по умолчанию браузера</p>
+                            </div>
+                            <div>
+                                <h4>unset</h4>
+                                <p>сброс к inherit или initial</p>
+                            </div>
+                        </div>
+                        <pre><code data-trim class="css">
+p {
+  color: initial; /* сбросит цвет к черному */
+}
+                        </code></pre>
+                    </section>
                 </section>
                 <section>
-                    <h1>Now supports Nerd font icons!</h1>
-                    <div>Nerdy project that adds icons to font itself</div>
-                    <h6>
-                        Checkout their site for icons like this
-                        <a href="https://www.nerdfonts.com/">󰖟</a>
-                        !
-                    </h6>
-                </section>
-                <section>
-                    <h1>Now supports automatic QRCode generation!</h1>
-                    <div>
-                        With GoQR you can just add data-type and alt attributes
-                        to your
-                        <code class="html">
-                            &lt;img src="https://goqr.me/" data-type="qrcode" /
-                            &gt;
-                        </code>
-                        tag!
-                    </div>
-                    <img
-                        class="r-stretch"
-                        src="https://goqr.me/"
-                        data-type="qrcode" />
-                </section>
-                <section>
-                    <h1>New changes on the way!</h1>
+                    <section>
+                        <h1>Единицы измерения шрифтов</h1>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="border-b">
+                                <h4>Относительные</h4>
+                                <ul>
+                                    <li>
+                                        <code>em</code>
+                                        (размер шрифта родительского элемента)
+                                    </li>
+                                    <li>
+                                        <code>rem</code>
+                                        (размер шрифта корневого элемента (
+                                        <code>html</code>
+                                        ))
+                                    </li>
+                                    <li>
+                                        <code>%</code>
+                                        (размер шрифта родительского элемента)
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="border-b">
+                                <h4>Абсолютные</h4>
+                                <ul>
+                                    <li>
+                                        <code>px</code>
+                                        (пиксели)
+                                    </li>
+                                    <li>
+                                        <code>pt</code>
+                                        (пункты)
+                                    </li>
+                                    <li>
+                                        <code>pc</code>
+                                        (пика)
+                                    </li>
+                                </ul>
+                            </div>
+                            <div style="grid-column: span 2" class="border-b">
+                                <h4>Адаптивные</h4>
+                                <ul>
+                                    <li>
+                                        <code>vw</code>
+                                        (ширине области просмотра)
+                                    </li>
+                                    <li>
+                                        <code>vh</code>
+                                        (высота области просмотра)
+                                    </li>
+                                    <li>
+                                        <code>ch</code>
+                                        (ширине символа "0")
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <h1>Абсолютные единицы измерения</h1>
+                        <p>
+                            задают фиксированный размер, который не зависит от
+                            других факторов, таких как настройки браузера или
+                            размер экрана
+                        </p>
+                        <div class="border-b">
+                            Хорошо подходят для разработки статичного интерфейса
+                        </div>
+                    </section>
+                    <section>
+                        <h1>Пиксели</h1>
+                        <h4><code>px</code></h4>
+                        <p><b>задают фиксированный размер шрифта</b></p>
+                        <div class="border-r">
+                            размер будет одинаковым, независимо от разрешения
+                            экрана или плотности пикселей
+                        </div>
+                        <pre><code data-trim class="html">
+p {
+  font-size: 16px;
+}
+                        </code></pre>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="border-g">
+                                <ul>
+                                    <li>Простота и предсказуемость</li>
+                                    <li>
+                                        Текст всегда будет одинакового размера
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="border-r">
+                                <ul>
+                                    <li>
+                                        Не адаптируется к изменению масштаба
+                                        страницы
+                                    </li>
+                                    <li>
+                                        Не очень гибко при работе с респонсивным
+                                        дизайном
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <h1>Пункты</h1>
+                        <h4><code>pt</code></h4>
+                        <p>
+                            <b>
+                                единица измерения, широко используемая в печати
+                            </b>
+                        </p>
+                        <div class="border-r">1 пункт равен 1/72 дюйма</div>
+                        <pre><code data-trim class="html">
+h1 {
+  font-size: 12pt;
+}
+                        </code></pre>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="border-g">
+                                <ul>
+                                    <li>
+                                        Применяется в печатных документах и
+                                        типографике
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="border-r">
+                                <ul>
+                                    <li>
+                                        Подходит в основном для печатных
+                                        материалов
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <h1>Пика</h1>
+                        <h4><code>pc</code></h4>
+                        <p>
+                            <b>
+                                единица измерения, широко используемая в печати
+                            </b>
+                        </p>
+                        <div class="border-r">
+                            1 пика равен 12 пунктам (или 1/6 дюйма)
+                        </div>
+                        <pre><code data-trim class="html">
+h1 {
+  font-size: 1pc;
+}
+                        </code></pre>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="border-g">
+                                <ul>
+                                    <li>
+                                        Применяется в печатных документах и
+                                        типографике
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="border-r">
+                                <ul>
+                                    <li>
+                                        Подходит в основном для печатных
+                                        материалов
+                                    </li>
+                                    <li>Не используется в вебе</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <h1>Относительные единицы измерения</h1>
+                        <p>
+                            их значение зависит от других параметров, таких как
+                            размер шрифта родительского элемента или устройства,
+                            на котором отображается контент
+                        </p>
+                        <div class="border-b">
+                            Позволяет создавать адаптивые и респонсив сайты
+                        </div>
+                    </section>
+                    <section>
+                        <h1>Em</h1>
+                        <h4><code>em</code></h4>
+                        <p>
+                            <b>
+                                зависит от размера шрифта родительского элемента
+                            </b>
+                        </p>
+                        <div class="border-r">
+                            1em равен текущему размеру шрифта элемента
+                        </div>
+                        <pre><code data-trim class="html">
+div {
+  font-size: 2em; /* x2 от родители */
+}
+                        </code></pre>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="border-g">
+                                <ul>
+                                    <li>Гибкость при наследовании</li>
+                                    <li>
+                                        Позволяет создавать иерархию размеров
+                                        шрифтов
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="border-r">
+                                <ul>
+                                    <li>
+                                        Может стать сложным в управлении, если
+                                        используются множественные вложенные
+                                        элементы
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <h1>Root em</h1>
+                        <h4><code>rem</code></h4>
+                        <p>
+                            <b>
+                                основывается на размере шрифта корневого
+                                элемента (обычно это &lt;html&gt;)
+                            </b>
+                        </p>
+                        <div class="border-r">
+                            1rem равен изначальному значению заданному в
+                            &lt;html&gt; (16px)
+                        </div>
+                        <pre><code data-trim class="html">
+html {
+font-size: 16px; /* Базовый размер шрифта */
+}
+
+h1 {
+  font-size: 2rem;  /* 2 * 16px = 32px */
+}
+                        </code></pre>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="border-g">
+                                <ul>
+                                    <li>Удобно для респонсивного дизайна</li>
+                                </ul>
+                            </div>
+                            <div class="border-r">
+                                <ul>
+                                    <li>
+                                        Нужно следить за базовым размером шрифта
+                                        на html или body
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <h1>Проценты</h1>
+                        <h4><code>%</code></h4>
+                        <p>
+                            <b>для установки размеров шрифта в зависимости от размера шрифта родительского элемента</b>
+                        </p>
+                        <div class="border-r">
+                            100% равен родительскому размеру шрифта
+                        </div>
+                        <pre><code data-trim class="html">
+div {
+  font-size: 150%;  /* 150% от размера шрифта родительского элемента */
+}
+                        </code></pre>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="border-g">
+                                <ul>
+                                    <li>
+                                        Применяется в печатных документах и
+                                        типографике
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="border-r">
+                                <ul>
+                                    <li>
+                                        Подходит в основном для печатных
+                                        материалов
+                                    </li>
+                                    <li>Не используется в вебе</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
                 </section>
             </div>
         </div>
@@ -396,4 +649,3 @@ var foo = {
         </script>
     </body>
 </html>
-
